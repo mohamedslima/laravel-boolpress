@@ -10953,3 +10953,33 @@ a.text-dark:focus {
   }
 }
 
+div.post_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.post_section div.post_card {
+  border: 1px solid black;
+  width: calc(25% - 50px);
+  margin: 20px auto;
+  padding: 10px;
+}
+
+div.single_post_section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.single_post_section div.single_post {
+  width: 70%;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
