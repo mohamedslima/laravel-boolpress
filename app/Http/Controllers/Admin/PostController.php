@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -43,7 +42,7 @@ class PostController extends Controller
         $data = $request->all();
         $post = new Post();
         $post->fill($data);
-        $post->slug = $this->generatePostsSlugFromTitle($post->title);
+        $post->slug = Post::generatePostsSlugFromTitle($post->title);
         $post->save();
 
         return redirect()->route('admin.posts.show', ['post' => $post->id]);
@@ -87,7 +86,7 @@ class PostController extends Controller
         $data = $request->all();
         $post = Post::findOrFail($id);
         $post->fill($data); 
-        $post->slug = $this->generatePostsSlugFromTitle($post->title);
+        $post->slug = Post::generatePostsSlugFromTitle($post->title);
         $post->save();
 
         return redirect()->route('admin.posts.show', ['post' => $post->id ]);
@@ -102,21 +101,6 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    private function generatePostsSlugFromTitle($title)
-    {
-        $base_slug = Str::slug($title, '-');
-        $slug = $base_slug;
-        $count = 1;
-        $post_found = Post::where('slug', '=', $slug)->first();
-        while ($post_found) {
-            $slug = $base_slug . '-' . $count;
-            $post_found = Post::where('slug', '=', $slug)->first();
-            $count++;
-        }
-
-        return $slug;
     }
 
     private function getValidationRules() {

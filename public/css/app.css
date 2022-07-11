@@ -21334,3 +21334,8 @@ ul.nav_boolpress li i.header_icon {
   color: #358fdc;
 }
 
+div.home_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
