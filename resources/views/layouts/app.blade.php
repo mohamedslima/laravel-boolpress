@@ -34,9 +34,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto nav_boolpress">
                         <li>    
+                            <i class="fas fa-home header_icon"></i>
                             <a href="{{ route('admin.posts.index') }}">Tutti i post</a>
                         </li>
-                        <li>    
+                        <li>
+                            <i class="fas fa-plus-circle header_icon"></i>
                             <a href="{{ route('admin.posts.create') }}">Crea un post</a>
                         </li>
                     </ul>

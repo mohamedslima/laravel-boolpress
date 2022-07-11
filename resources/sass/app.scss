@@ -10,6 +10,12 @@
 // Post
 @import 'partials/_posts';
 
+// font-awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
 
 
 * {
@@ -21,5 +27,8 @@
 ul.nav_boolpress {
     li {
         margin-left: 10px;
+        i.header_icon {
+            color: #358fdc;
+        }
     }
 }
