@@ -41,6 +41,10 @@
                             <i class="fas fa-plus-circle header_icon"></i>
                             <a href="{{ route('admin.posts.create') }}">Crea un post</a>
                         </li>
+                        <li>
+                            <i class="fas fa-list header_icon"></i>
+                            <a href="{{ route('admin.categories.index') }}">Categorie</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
