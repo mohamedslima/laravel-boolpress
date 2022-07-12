@@ -23,6 +23,15 @@
                 <input type="title" class="form-control" name="title" id="create_title" placeholder="Inserisci il titolo">
             </div>
             <div class="form-group">
+                <label for="category_id">Categoria</label>
+                <select class="form-control" name="category_id" id="category_id">
+                  <option value="">Nessuna</option>
+                    @foreach ($categories as $category)
+                      <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                    @endforeach
+                </select>
+              </div>
+            <div class="form-group">
                 <label for="content">Contenuto</label>
                 <textarea type="email" class="form-control" name="content" id="create_content" placeholder="Inserisci il contenuto"></textarea>
             </div>
