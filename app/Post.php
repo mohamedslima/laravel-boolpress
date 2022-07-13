@@ -18,6 +18,10 @@ class post extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function tags() {
+        return $this->belongsToMany('App\Tag');
+    }
+
     public static function generatePostsSlugFromTitle($title)
     {
         $base_slug = Str::slug($title, '-');

@@ -25,12 +25,22 @@
             <div class="form-group">
                 <label for="category_id">Categoria</label>
                 <select class="form-control" name="category_id" id="category_id">
-                  <option value="">Nessuna</option>
+                    <option value="">Nessuna</option>
                     @foreach ($categories as $category)
-                      <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}</option>
                     @endforeach
                 </select>
-              </div>
+            </div>
+            @foreach ($tags as $tag)
+                <div class="form-check">
+                    <input name="tags" class="form-check-input" type="checkbox" value="{{ $tag->id }}"
+                        id="tag-{{ $tag->id }}">
+                    <label class="form-check-label" for="{{ $tag->id }}">
+                        {{ $tag->name }}
+                    </label>
+                </div>
+            @endforeach
             <div class="form-group">
                 <label for="content">Contenuto</label>
                 <textarea type="email" class="form-control" name="content" id="create_content" placeholder="Inserisci il contenuto"></textarea>
