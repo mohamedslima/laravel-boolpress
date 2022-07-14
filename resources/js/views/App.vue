@@ -1,8 +1,6 @@
 <template>
   <div>
-    <header>
-      Q uesto è header
-    </header>
+    <Header />
     <router-view></router-view>
     <footer>
       Footer
@@ -11,12 +9,12 @@
 </template>
 
 <script>
-import Posts from '../components/Posts.vue';
+import Header from "../components/Header.vue";
 
 export default {
   name: "App",
   components: {
-    Posts
+    Header,
   },
 };
 </script>
