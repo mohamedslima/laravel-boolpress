@@ -5,10 +5,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
+            <router-link class="nav-link" :to="{name: 'home'}">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about">About</router-link>
+            <router-link class="nav-link" :to="{name: 'blog'}">Blog</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{name: 'about'}">About</router-link>
           </li>
         </ul>
       </div>
