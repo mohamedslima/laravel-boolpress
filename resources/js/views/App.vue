@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>Pagina Guest</h1>
-    <Posts />
+    <header>
+      Q uesto è header
+    </header>
+    <router-view></router-view>
+    <footer>
+      Footer
+    </footer>
   </div>
 </template>
 
@@ -17,4 +22,5 @@ export default {
 </script>
 
 <style>
+ 
 </style>

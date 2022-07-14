@@ -23,5 +23,9 @@
         "sass-loader": "^8.0.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "bootstrap-vue": "^2.22.0",
+        "vue-router": "^3.5.4"
     }
 }

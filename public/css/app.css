@@ -21339,6 +21339,11 @@ div.home_container {
   margin: 0 auto;
 }
 
+div.paginate_container {
+  width: 85%;
+  margin: 0 auto;
+}
+
 div.categories_main {
   width: 80%;
   margin: 0 auto;

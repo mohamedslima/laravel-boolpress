@@ -43,6 +43,7 @@ export default {
 };
 </script>
 
+
 <style>
 div.posts_container {
   width: 90%;
@@ -53,10 +54,11 @@ div.posts_container {
 }
 
 div.post_card {
-    width: 260px;
-    height: 230px;
-    padding: 10px;
-    margin: 10px 10px 0 0;
-    border: 1px solid black;
+  width: 260px;
+  height: 230px;
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  border: 1px solid black;
 }
+
 </style>
